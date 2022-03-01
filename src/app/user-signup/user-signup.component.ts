@@ -12,7 +12,7 @@ import { User } from '../User';
 export class UserSignupComponent implements OnInit {
   addForm: any;
   user: any;
-  checkRegister: any;
+  //checkRegister: boolean;
   submitted: boolean = false;
   invalidRegisteration: boolean = false;
   constructor(
@@ -37,14 +37,20 @@ export class UserSignupComponent implements OnInit {
     this.loginService
       .getRegister(this.addForm.controls.email.value)
       .subscribe((data) => {
-        this.checkRegister = data;
-        console.log(data);
+        // this.checkRegister = data;
+        this.checkBoolean(data);
       });
+  }
+  checkBoolean(chkBoolean: boolean) {
+    if (this.addForm.invalid) {
+      return;
+    }
+    console.log(chkBoolean);
     if (this.addForm.invalid) {
       return;
     }
 
-    if (this.checkRegister == false) {
+    if (chkBoolean == false) {
       this.loginService
         .registerUser(this.addForm.value)
         .subscribe((data) => {});
