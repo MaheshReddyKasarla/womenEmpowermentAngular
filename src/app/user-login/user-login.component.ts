@@ -13,7 +13,7 @@ export class UserLoginComponent implements OnInit {
 
   submitted: boolean = false;
   invalidLogin: boolean = false;
-  checkLogin: any;
+  //checkLogin: boolean = false;
 
   user: any;
   email: string = '';
@@ -26,20 +26,24 @@ export class UserLoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+
     this.loginService
       .getPassword(
         this.loginForm.controls.email.value,
         this.loginForm.controls.password.value
       )
       .subscribe((data) => {
-        this.checkLogin = data;
-        console.log(this.checkLogin);
+        //this.checkLogin = data;
+        this.checkBoolean(data);
       });
+  }
 
+  checkBoolean(chkBoolean: boolean) {
     if (this.loginForm.invalid) {
       return;
     }
-    if (this.checkLogin == true) {
+    console.log(chkBoolean);
+    if (chkBoolean) {
       this.invalidLogin = false;
 
       localStorage.setItem('verifiedLogin', 'true');
