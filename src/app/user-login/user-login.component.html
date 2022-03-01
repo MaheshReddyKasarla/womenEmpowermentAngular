@@ -1,0 +1,254 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container px-5">
+    <img
+      class="logo"
+      src="assets/images/mwcd.jfif"
+      width="100"
+      height="60"
+    />&nbsp;&nbsp;
+
+    <h3 style="color: white">Women Empowerment</h3>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <!-- <li class="nav-item">
+                <a class="nav-link" href="Register.html">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Log In</a> -->
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']" title="About us"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/ngo']"
+            title="Non-Governmental Organizations"
+            >NGO's</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/trainings']" title="Trainings"
+            >Trainings</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/faq']"
+            title="Frequently Asked Questions"
+            >FAQ</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contactus']" title="Contact Us"
+            >Contact Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/user']" title="Update user"
+            >Account</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url("./images/BackgroundHome.jpg");
+        height: 100vh;
+      }
+
+      .row {
+        background: white;
+        border-radius: 30px;
+        box-shadow: 12px 12px 22px white;
+      }
+
+      img {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+
+      .btn1 {
+        border: none;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+
+      .btn1:hover {
+        background: white;
+        border: 1px solid;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: orangered">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <section class="Form my-4 mx-5">
+      <div class="Container">
+        <div class="row no-gutters">
+          <div class="col-lg-5">
+            <img src="./assets/images/userlogin.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-lg-7 px-5 pt-5">
+            <b>
+              <h4 class="font-waight-bold py-3">SIGN IN</h4>
+            </b>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-lg-7">
+                    <input
+                      type="email"
+                      class="form-control"
+                      formControlName="email"
+                      placeholder="Enter email id or username"
+                      id="email"
+                      class="form-control my-2 p-3"
+                    />
+                    <div
+                      *ngIf="submitted && loginForm.controls.email.errors"
+                      class="error"
+                    >
+                      <div
+                        class="text-danger"
+                        *ngIf="loginForm.controls.email.errors.required"
+                      >
+                        Email is required
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-lg-7">
+                    <input
+                      type="password"
+                      class="form-control"
+                      formControlName="password"
+                      placeholder="********"
+                      id="pwd"
+                      class="form-control my-2 p-3"
+                    />
+                    <div
+                      *ngIf="submitted && loginForm.controls.password.errors"
+                      class="error"
+                    >
+                      <div
+                        class="text-danger"
+                        *ngIf="loginForm.controls.password.errors.required"
+                      >
+                        Password is required
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <button class="btn1 mt-3 mb-4">Login</button> &nbsp; &nbsp;
+
+                  <br /><br />
+                  <div *ngIf="invalidLogin" class="error">
+                    <div class="text-danger">Invalid credentials.</div>
+                  </div>
+                </div>
+              </div>
+              <a href="#">Forgot Password</a>
+              <p>Don't Have Account? <a routerLink="/signup">Sign Up</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <br />
+    <br />
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>
+          Ministry of Women and Child Development developed and maintained by
+          &nbsp; &nbsp; &nbsp; &nbsp;Larsen & Toubro Infotech</small
+        >
+      </div>
+    </footer>
+  </body>
+</html>

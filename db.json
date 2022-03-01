@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "sonu@gmail.com",
+      "firstName": "Sonu",
+      "lastName": "Sathyadass"
+    },
+    {
+      "id": 2,
+      "firstName": "Rashmi",
+      "lastName": "Pawaskar",
+      "email": "rashmi@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 3,
+      "firstName": "Smita",
+      "lastName": "Singh",
+      "email": "smita@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 4,
+      "firstName": "Mahendra",
+      "lastName": "Shinde",
+      "email": "mahendra@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 5,
+      "firstName": "Mahesh",
+      "lastName": "Kasarla",
+      "email": "maheshreddy0609@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "voluntersList": [
+    {
+      "id": 1,
+      "category": "category1",
+      "firstName": "Anchal",
+      "lastName": "Singh",
+      "email": "anchal@gmail.com",
+      "contact": "7777777777",
+      "gender": "gender2",
+      "dob": "2022-02-21"
+    },
+    {
+      "id": 2,
+      "category": "category4",
+      "firstName": "avika",
+      "lastName": "",
+      "email": "avika",
+      "contact": "12345678923",
+      "gender": "gender2",
+      "dob": "2002-12-06"
+    },
+    {
+      "id": 3,
+      "category": "category2",
+      "firstName": "Manish",
+      "lastName": "Singh",
+      "email": "manish@gmail.com",
+      "contact": 8765987645,
+      "gender": "gender2",
+      "dob": "1999-04-19"
+    },
+    {
+      "id": 4,
+      "category": "category1",
+      "firstName": "Shrawani",
+      "lastName": "sangitra",
+      "email": "ss@gmail.com",
+      "contact": 7777777777,
+      "gender": "gender2",
+      "dob": "2022-02-08"
+    }
+  ]
+}

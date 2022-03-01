@@ -1,0 +1,41 @@
+								
+<div class="col-lg-12">								
+  <h2 style="text-align: center;"> Details of Volunteers</h2>								
+ 							
+<!-- <button class="btn btn-success" (click)="addUser()"> Add User</button> &nbsp;&nbsp;								 -->
+<!-- <button class="btn btn-danger" (click)="logOutUser()"> LogOff</button>								 --> -->
+  								 
+  <table class="table table-striped table-responsive table-hover">								
+   							
+    <tr>								
+      <th class="text-hide">Id</th>								
+      <th>Category</th>								
+      <th>Full Name</th>		
+      <!-- <th>Last Name</th>						 -->
+      <th>Email Address</th>								
+      <th>Contact No.</th>		
+      <th>Gender</th>
+      <th>Date of Birth</th>						
+    </tr>								
+   								
+    <tbody>								
+    <tr *ngFor="let v of voluntersList">								
+      <td class="text-hide">{{user.id}}</td>
+      <td>{{v.category}}</td>										
+      <td>{{v.firstName}}+""+{{v.lastName}}</td>								
+      <td>{{v.email}}</td>	
+      <td>{{v.contact}}</td>	
+      <td>{{v.gender}}</td>	
+      <td>{{v.dob}}</td>								
+ <!--      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>								
+        <button class="btn btn-warning" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>								 -->
+    </tr>								
+    <tr *ngIf="!voluntersList || voluntersList.length==0">								
+      <th colspan="12">								
+        <p class="text-right text-danger">Sorry No Volunteers Available</p>								
+      </th>								
+    </tr>								
+    </tbody>								
+  </table>								
+</div>								
+		

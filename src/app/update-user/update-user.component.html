@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+  </head>
+  <body>
+    <body id="page-top">
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container px-5">
+          <img
+            class="logo"
+            src="assets/images/mwcd.jfif"
+            width="100"
+            height="60"
+          />&nbsp;&nbsp;
+          <h3 style="color: white;"> Women Empowerment</h3>
+         
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="Register.html">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Log In</a> -->
+              
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/about']" title="About us">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/ngo']" title="Non-Governmental Organizations">NGO's</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/trainings']" title="Trainings">Trainings</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/faq']" title="Frequently Asked Questions">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/contactus']" title="Contact Us">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/user']" title="Update user">Account</a>
+          </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Header-->
+      <header class="masthead text-center text-white">
+        <div class="masthead-content">
+          <div class="container px-8"></div>
+          
+          <section class="vh-100" >
+            
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-10">
+            <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 40px;">
+          <div class="card-body p-md-5">
+          <div class="row justify-content-center">    
+          <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1"> 
+          <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Update Account</p>
+          <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="mx-1 mx-md-4">
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <div class="form-group">
+                  <label for="firstName">First Name:</label>
+                  <input
+                    formControlName="firstName"
+                    placeholder="First Name"
+                    name="firstName"
+                    class="form-control"
+                    id="firstName"
+                  />
+                  <div
+                    *ngIf="submitted && editForm.controls.firstName.errors"
+                    class="error"
+                  >
+                    <div
+                      class="text-danger"
+                      *ngIf="editForm.controls.firstName.errors.required"
+                    >
+                      FirstName is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row mb-4 ">
+              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <div class="form-group">
+                  <label for="lastName">Last Name:</label>
+                  <input
+                    formControlName="lastName"
+                    placeholder="Last name"
+                    name="lastName"
+                    class="form-control"
+                    id="lastName"
+                  />
+                  <div
+                    *ngIf="submitted && editForm.controls.lastName.errors"
+                    class="error"
+                  >
+                    <div
+                      class="text-danger"
+                      *ngIf="editForm.controls.lastName.errors.required"
+                    >
+                      LastName is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4">
+              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+              <div class="form-outline flex-fill mb-0">
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input
+                    type="email"
+                    formControlName="email"
+                    placeholder="Email"
+                    name="email"
+                    class="form-control"
+                    id="email"
+                  />
+                  <div
+                    *ngIf="submitted && editForm.controls.email.errors"
+                    class="error"
+                  >
+                    <div
+                      class="text-danger"
+                      *ngIf="editForm.controls.email.errors.required"
+                    >
+                      Email is required
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-success">Update</button>&nbsp; &nbsp;
+            <br /><br />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+      </header>
+      <!-- Footer-->
+      <footer
+        id="sticky-footer"
+        class="flex-shrink-0 py-4 bg-dark text-white-50"
+      >
+        <div class="container text-center">
+          <small> Ministry of Women and Child Development developed and maintained by &nbsp; &nbsp; &nbsp; &nbsp;Larsen & Toubro Infotech</small>
+        </div>
+      </footer>
+      <!-- Bootstrap core JS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Core theme JS-->
+    </body>
+  </body>
+</html>
