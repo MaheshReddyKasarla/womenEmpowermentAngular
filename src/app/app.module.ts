@@ -9,13 +9,13 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { HomeComponent } from './home/home.component';
-import { NgoRegisterComponent } from './ngo-register/ngo-register.component';
-import { NgoLoginComponent } from './ngo-login/ngo-login.component';
 import { NgoVolunteerListComponent } from './ngo-volunteer-list/ngo-volunteer-list.component';
 
 import { AboutComponent } from './about/about.component';
 import { FaqComponent } from './faq/faq.component';
 import { TrainingsComponent } from './trainings/trainings.component';
+import { NgoComponent } from './ngo/ngo.component';
+import { NgoDetailsComponent } from './ngo-details/ngo-details.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,8 @@ import { TrainingsComponent } from './trainings/trainings.component';
     UserLoginComponent,
     UserSignupComponent,
     HomeComponent,
-    NgoRegisterComponent,
-    NgoLoginComponent,
+    NgoComponent,
+    NgoDetailsComponent,
     NgoVolunteerListComponent,
 
     AboutComponent,

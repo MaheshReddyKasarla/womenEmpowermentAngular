@@ -84,4 +84,36 @@
   know{
       margin-top: 20px;
   }
+
+  /* .tableCenter {
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  table {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px;
+    
+  }
   
+  tr {
+    color: teal;
+  }
+  
+  th {
+    background-color: black;
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  td {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+
+  /* .card-img {
+    width: 100%;
+    height: 40px;
+    object-fit: contain;
+} */
