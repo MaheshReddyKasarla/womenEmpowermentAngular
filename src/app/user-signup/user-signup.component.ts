@@ -41,7 +41,7 @@ export class UserSignupComponent implements OnInit {
         this.checkBoolean(data);
       });
   }
-  checkBoolean(chkBoolean: boolean) {
+  checkBoolean(chkBoolean: number) {
     if (this.addForm.invalid) {
       return;
     }
@@ -50,11 +50,11 @@ export class UserSignupComponent implements OnInit {
       return;
     }
 
-    if (chkBoolean == false) {
+    if (chkBoolean == 0) {
       this.loginService
         .registerUser(this.addForm.value)
         .subscribe((data) => {});
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/login');
     } else {
       this.invalidRegisteration = true;
     }
