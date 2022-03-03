@@ -1,4 +1,5 @@
 export class User {
+  [x: string]: any;
   userId: number = 0;
   fullName: string = '';
   address: string = '';

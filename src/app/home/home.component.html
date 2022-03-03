@@ -44,18 +44,19 @@
       </div>
      -->
 <style>
-    #main-container {
+  #main-container {
     width: 100%;
     height: 100vh;
-    background: url('assets/images/Women-Skill-India-schemes.jpeg')no-repeat center center fixed; 
+    background: url("assets/images/Women-Skill-India-schemes.jpeg") no-repeat
+      center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: #ffffff;
-}
+  }
 </style>
-     <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="assets/images/mwcd.jfif" height="58">
@@ -89,57 +90,78 @@
           </div>
         </div>
       </nav> -->
-      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container px-5">
-          <a class="navbar-brand" href="#">
-          <img
-            class="logo"
-            src="assets/images/mwcd.jfif"
-            width="100"
-            height="60"
-          />&nbsp;&nbsp;
-             Women Empowerment</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container px-5">
+    <a class="navbar-brand" href="#">
+      <img
+        class="logo"
+        src="assets/images/mwcd.jfif"
+        width="100"
+        height="60"
+      />&nbsp;&nbsp; Women Empowerment</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']" title="About us"
+            >About</a
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/about']" title="About us">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/ngo']" title="Non-Governmental Organizations">NGO's</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/trainings']" title="Trainings">Trainings</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/faq']" title="Frequently Asked Questions">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/contactus']" title="Contact Us">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/user']" title="Account">Account</a>
-          </li>
-            </ul>
-
-            </div></div></nav>
-     
-     
-            <div class="view" id="main-container">
-        <div class="overlay">
-            <h1 class="text-center p-4">Ministry of Women Empowerment</h1>
-        </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/ngo']"
+            title="Non-Governmental Organizations"
+            >NGO's</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/trainings']" title="Trainings"
+            >Trainings</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/faq']"
+            title="Frequently Asked Questions"
+            >FAQ</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contactus']" title="Contact Us"
+            >Contact Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/profile']" title="Account"
+            >Account</a
+          >
+        </li>
+      </ul>
     </div>
-      <div class="footer-copyright text-center py-3" id="footer-bottom">© 2020 Copyright :&nbsp;
-        <a class="footer-link" href=""> Ministry of Women and Child Development</a>&nbsp; developed and maintained by <a class="footer-link"  href="">&nbsp;Larsen & Toubro Infotech</a>
-      </div>
+  </div>
+</nav>
+
+<div class="view" id="main-container">
+  <div class="overlay">
+    <h1 class="text-center p-4">Ministry of Women Empowerment</h1>
+  </div>
+</div>
+<div class="footer-copyright text-center py-3" id="footer-bottom">
+  © 2020 Copyright :&nbsp;
+  <a class="footer-link" href=""> Ministry of Women and Child Development</a
+  >&nbsp; developed and maintained by
+  <a class="footer-link" href="">&nbsp;Larsen & Toubro Infotech</a>
+</div>

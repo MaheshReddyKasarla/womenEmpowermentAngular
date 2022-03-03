@@ -16,6 +16,7 @@ import { FaqComponent } from './faq/faq.component';
 import { TrainingsComponent } from './trainings/trainings.component';
 import { NgoComponent } from './ngo/ngo.component';
 import { NgoDetailsComponent } from './ngo-details/ngo-details.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NgoDetailsComponent } from './ngo-details/ngo-details.component';
     AboutComponent,
     FaqComponent,
     TrainingsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
